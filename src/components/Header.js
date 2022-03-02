@@ -21,11 +21,11 @@ const Header = () => {
                   
                  <Dropdown   style={{padding:10}}>
                    <Dropdown.Toggle variant="success">
-             Your      Shopping cart     <FaShoppingCart color='white' fontSize='15px'/>
+            Add Item/cart <FaShoppingCart color='white' fontSize='15px'/>
                        <Badge bg="green">{cart.length}</Badge>
                    </Dropdown.Toggle>
                    
-                   <Dropdown.Menu style={{minwidth:370}}>
+                   <Dropdown.Menu  style={{minwidth:370}}>
                        {cart.length>0 ? (
                            <>
                            {cart.map((prod)=>(
@@ -47,7 +47,7 @@ const Header = () => {
                                </span>
                            ))}
                            <Link to="/cart">
-                               <Button style={{width:"95%",margin: "0 10px"}}>
+                               <Button style={{width:"100%",margin: "0 0px"}}>
                                Go to Cart
                                </Button>
                                </Link>

@@ -3,13 +3,14 @@
 import { Button, Form } from 'react-bootstrap';
 import { CartState } from '../context/Context';
 import Rating from './Rating';
+import {FaFilter} from 'react-icons/fa'
 
 const Filters = () => {
 
   const {productState:{byStock,byFastDelivery,sort,byRating}, productDispatch}=CartState();
  
   return <div className='filters'>
-      <span className='title'>Filters Products</span>
+      <span className='title'><FaFilter/> Filters </span>
       <span>
           <Form.Check inline label="Ascending" name="group1" type="radio" id={`inline-1`} onChange={(i)=>productDispatch({
               type: "SORT_BY_PRICE",
